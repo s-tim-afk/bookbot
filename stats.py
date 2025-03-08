@@ -18,9 +18,7 @@ def sort_on(dict):
 def sort_character_count(dict):
 	sorted_characters = []
 	for key in dict:
-		character = key
-		count = dict[key]
-		if key.isalpha() == True:
-			sorted_characters.append({"character": character, "count": count})
+		if key.isalpha():
+			sorted_characters.append({"character": key, "count": dict[key]})
 	sorted_characters.sort(reverse=True, key=sort_on)
 	return sorted_characters
